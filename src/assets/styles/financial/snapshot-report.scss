@@ -1,0 +1,447 @@
+.header-section {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px 40px;
+  color: #060708;
+  width: 100%;
+  .header-right {
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    .right-img {
+      width: 53px;
+      height: 53px;
+      min-width: 53px;
+      border-radius: 50%;
+      margin-left: 20px;
+      object-fit: cover;
+      aspect-ratio: 1;
+    }
+    .right-info {
+      font-size: 14px;
+      line-height: 18px;
+      justify-content: center;
+      .txt-name {
+        font-weight: bold;
+      }
+    }
+    .currency-area {
+      margin-right: 24px;
+      min-width: fit-content;
+      .content-header {
+        margin-top: auto;
+        margin-bottom: auto;
+        ::v-deep {
+          .currency-content {
+            .txt-title {
+              color: #060708;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.link-text {
+  display: block;
+  text-align: right;
+  margin-right: 6px;
+  width: 100px;
+  margin-left: auto;
+  img {
+    margin-right: 2px;
+  }
+}
+.title-section {
+  font-size: 16px;
+  line-height: 21px;
+  margin-bottom: 20px;
+  .pre-url-txt {
+    color: #a3abad;
+    cursor: pointer;
+  }
+  .pre-url-txt:hover {
+    color: #0d7592;
+  }
+  .cur-url-txt {
+    color: #060708;
+    cursor: default;
+  }
+}
+.charts-for-pdf {
+  .chart-content {
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+    display: flex;
+    justify-content: center;
+    h4 {
+      text-align: center;
+    }
+    img {
+      height: 320px;
+    }
+  }
+}
+.content-section {
+  height: 100%;
+  width: 100%;
+  &.content-section-print {
+    .snapshot-tabs{
+      margin-top: -60px;
+      ::v-deep {
+        .nav-tabs {
+          display: none;
+        }
+      }
+    }
+    .row {
+      ::v-deep {
+        .value-list-content {
+          &:not(:first-child) {
+            margin-top: 117px
+          }
+        }
+        .tb-squad-info {
+          margin-top: 62px
+        }
+        .tb-league {
+          margin-top: 170px
+        }
+        .tb-club-sponsors {
+          margin-top: 143px;
+        }
+      }
+    }
+  }
+    .snapshot-tabs{
+      ::v-deep {
+        .nav-tabs {
+          .nav-item {
+            .nav-link {
+              margin-right: 10px;
+            }
+          }
+        }
+        .tab-content {
+          background-color: #fff;
+          padding: 25px 20px;
+        }
+      }
+    }
+  .row {
+    height: 100%;
+    justify-content: space-between;
+    ::v-deep {
+      .club-list-content,
+      .value-list-content,
+      .value-split-list-content,
+      .club-positions-content,
+      .sponsors-social-content{
+        max-height: 800px;
+        height: auto;
+      }
+      .club-list-content {
+        .logo-area {
+          background-color: #73AF00;
+          padding: 8px;
+          justify-content: space-between;
+          align-items: center;
+          color: white;
+          font-weight: 700;
+          .club-logo {
+            width: 48px;
+            height: 48px;
+          }
+        }
+        .tb-club-info {
+          overflow-y: auto;
+        }
+      }
+      .tb-blue {
+        background-color: rgba(115, 205, 226, 0.3);
+        thead {
+          tr {
+            background-color: rgba(54, 158, 186, 0.7);
+            td {
+              color: #ffffff;
+              font-weight: 700;
+              text-align: center!important;
+              vertical-align: middle;
+            }
+          }
+        }
+        tbody {
+          tr {
+            &:nth-child(2n + 1) {
+              background-color: rgba(54, 158, 186, 0.2);
+            }
+            td:not(:first-child) {
+              text-align: center;
+            }
+          }
+        }
+      }
+      .club-list-content, .tb-squad-info{
+        table {
+          tr {
+            td {
+              font-weight: 700;
+              &:first-child {
+                width: 35%;
+              }
+              &:last-child {
+                width: 65%;
+              }
+            }
+          }
+        }
+      }
+      .tb-league {
+        margin-top: 80px
+      }
+      .value-list-content {
+        margin-bottom: 30px;
+        &.player-transfer {
+          td {
+            &:first-child {
+              width: 35%;
+            }
+          }
+        }
+        table {
+          thead, tbody {
+            tr {
+              display: table;
+              width: 100%;
+              table-layout: fixed;
+              td {
+                &:first-child {
+                  width: 20%;
+                }
+              }
+            }
+          }
+          thead {
+            tr {
+              td:first-child {
+                text-align: left!important;
+              }
+            }
+          }
+        }
+      }
+      .value-split-list-content {
+        min-width: fit-content;
+        background-color: white;
+        border-radius: 8px;
+      }
+      .tb-squad-info {
+        overflow-y: auto;
+        margin-top: 30px;
+        table {
+          tr{
+            &.bold td {
+              font-weight: bold;
+            }
+            td {
+              font-weight: 400;
+            }
+            &:first-child {
+              background-color: #73AF00;
+              td {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+      .tb-club-honours {
+        overflow-y: auto;
+        table {
+          thead {
+            tr {
+              background-color: #73AF00;
+              td {
+                color: white;
+                text-align: center!important;
+                font-size: 16px;
+              }
+            }
+          }
+          tbody {
+            tr {
+              &:last-child {
+                height: 30px;
+              }
+              &.default-row {
+                td:nth-last-child(2){
+                  border-right: none;
+                }
+              }
+              td {
+                &:last-child {
+                  display: flex;
+                  justify-content: space-between;
+                }
+                text-align: center;
+                img {
+                  width: 53px;
+                  height: 53px;
+                  border-radius: 50%;
+                  border: 2px solid #DFF8FF;
+                  background-color: #ffffff;
+                  object-fit: contain;
+                }
+              }
+            }
+          }
+        }
+      }
+      .tb-club-sponsors {
+        margin-top: 47px;
+      }
+      table {
+        width: 100%;
+        &.tb-green {
+          tbody {
+            background-color: rgba(155, 221, 92, 0.3);;
+            tr {
+              &:nth-child(2n) {
+                background: rgba(115, 175, 0, 0.2);
+              }
+            }
+          }
+        }
+        thead,
+        tbody {
+          width: 100%;
+          tr {
+            td,
+            span {
+              font-size: 14px;
+              line-height: 18px;
+              color: #000000;
+              text-align: right;
+              vertical-align: middle;
+              border-right: 2px solid #ffffff;
+            }
+            td:first-child {
+              padding-left: 8px;
+              text-align: left;
+            }
+            td:last-child {
+              padding-right: 8px;
+              border-right: none;
+            }
+          }
+        }
+        thead,
+        .tr-label {
+          background-color: #f3f7fc;
+          td {
+            font-weight: bold;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+          }
+        }
+        tbody {
+          td {
+            padding: 8px 2px 6px;
+            &:last-child {
+              text-align: left;
+              padding-left: 10px;
+            }
+          }
+          tr:first-child {
+            td {
+              padding-top: 8px;
+            }
+          }
+          .tr-label + tr {
+            td {
+              padding-top: 8px;
+            }
+          }
+          tr:last-child {
+            td {
+              padding-bottom: 8px;
+            }
+          }
+        }
+      }
+      .snapshot-charts {
+        .financial-charts {
+          min-height: 150px;
+        }
+        .financial-charts, .league-rank-charts {
+          .txt-title {
+            font-size: 14px;
+            font-weight: bold;
+          }
+          .v-autocomplete {
+            border: 1px solid #D9DFE5;
+            font-size: 14px;
+          }
+          .txt-chart-name {
+            text-align: center;
+            display: block;
+            padding-top: 20px;
+          }
+          .chart-area {
+            max-height: 300px;
+          }
+        }
+      }
+      .txt-chart-name {
+        font-size: 14px;
+        font-weight: bold;
+        color: #253242;
+        text-align: center;
+        display: block;
+        padding-top: 30px
+      }
+      .chart-area {
+        min-height: 300px;
+      }
+      .print-btn {
+        display: block;
+        margin-right: 10px;
+        text-align: right;
+        font-size: 14px;
+        color: #3a9eba;
+        font-weight: bold;
+        img {
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .header-section {
+    flex-flow: column;
+    .header-right {
+      margin-top: 20px;
+      justify-content: flex-start;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .header-section {
+    .header-right {
+      flex-flow: column;
+      .currency-area {
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
+      .right-img {
+        margin: 10px 0 0
+      }
+    }
+  }
+}

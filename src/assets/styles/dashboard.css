@@ -1,0 +1,362 @@
+/* When there are 4 columns */
+@media only screen and (min-width: 1294px) {
+  .grid.grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 220px auto auto;
+    grid-template-areas:
+      'general borrow received dealcalc'
+      'general dealcompletion dealcompletion financial'
+      'general dealcompletion dealcompletion athletescomp'
+      'footer footer footer footer';
+  }
+}
+
+/* When there are 3 columns */
+@media only screen and (max-width: 1294px) {
+  .grid.grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 220px 220px auto auto;
+    grid-template-areas:
+      'general borrow received'
+      'general dealcompletion dealcalc'
+      'general dealcompletion athletescomp'
+      'general dealcompletion financial'
+      'footer  footer footer';
+  }
+}
+
+/* When there are 2 columns */
+@media only screen and (max-width: 1030px) {
+  .grid.grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 220px 1218px 220px 1081px 1fr;
+    grid-template-areas:
+      'general dealcalc'
+      'general financial'
+      'borrow received'
+      'dealcompletion dealcompletion'
+      'athletescomp athletescomp'
+      'footer footer';
+  }
+  /* .content {
+    padding: 24px 15px 0;
+  } */
+}
+
+/* When there is 1 column */
+@media only screen and (max-width: 750px) {
+  .grid.grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 220px 220px 220px 1086px 1100px 1fr;
+    grid-template-areas:
+      'general'
+      'dealcalc'
+      'borrow'
+      'received'
+      'dealcompletion'
+      'athletescomp'
+      'financial'
+      'footer';
+  }
+  /* .content {
+    padding: 88px 15px 24px;
+  } */
+}
+@media only screen and (min-width: 750px) {
+  /* .content {
+    margin-left: 163px;
+    padding: 24px 40px 0;
+  } */
+}
+/* Naming components */
+.general-information {
+  grid-area: general;
+}
+.total-borrow {
+  grid-area: borrow;
+}
+.total-received {
+  grid-area: received;
+}
+.financial-overview {
+  grid-area: financial;
+}
+.deal-calculator {
+  grid-area: dealcalc;
+}
+.deal-completion {
+  grid-area: dealcompletion;
+}
+.athletes-component {
+  grid-area: athletescomp;
+}
+.latest-actions {
+  grid-area: actions;
+}
+.footer {
+  grid-area: footer;
+}
+
+/* GLOBAL */
+.grid {
+  display: grid;
+  height: 1550px;
+  gap: 15px;
+  margin-top: 16px;
+}
+.grid > * {
+  min-width: 230px;
+}
+
+.component {
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  padding: 20px;
+  /* height: max-content; */
+}
+
+/*Company information*/
+h1,
+h2,
+h3,
+p {
+  color: #253242;
+}
+a {
+  text-decoration: none;
+}
+a svg {
+  margin-right: 6px;
+  margin-bottom: 3px;
+}
+/* a.link-text {
+  color: #3a9eba;
+  font-size: 14px;
+  font-weight: 700;
+}
+a.link-text-small {
+  color: #3a9eba;
+  font-size: 12px;
+  font-weight: 700;
+} */
+h3.money-total {
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.club-header {
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+.club-header h3 {
+  margin: 0;
+  line-height: 21px;
+}
+
+.club-name img {
+  width: 100%;
+}
+.club-name {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.club-name h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+.club-name img {
+  width: auto;
+  height: 16px;
+}
+/*Globals*/
+.section-header {
+  margin-top: 14px;
+}
+.component-header,
+.section-header {
+  font-size: 15px;
+  font-weight: 700;
+}
+/*Text with label*/
+label,
+.sponsors p {
+  font-size: 11px;
+  color: #93a0ae;
+  font-weight: 600;
+}
+.text-with-label p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+/* .sponsors {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+}
+.sponsors p.sponsor-label {
+  margin-bottom: 8px;
+}
+.sponsors p.sponsor-name {
+  color: #253242;
+  font-size: 12px;
+  line-height: 15.06px;
+  margin: 6px auto 0;
+}
+.sponsors div {
+  text-align: center;
+} */
+
+label,
+.clubs p {
+  font-size: 11px;
+  color: #93a0ae;
+  font-weight: 600;
+}
+
+.clubs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  align-items: flex-start;
+}
+.clubs img {
+  width: auto;
+  max-width: 40px;
+  max-height: 40px;
+  margin: 0 auto;
+}
+.clubs p.clubs-label {
+  margin: 6px auto 0;
+  /* height: 33px; */
+  color: #253242;
+  font-size: 12px;
+  line-height: 15.06px;
+}
+
+.clubs .club {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+/*
+
+---------  For social media followers in General Info Component  ------------
+
+.progress {
+  box-sizing: border-box;
+  background: none;
+  min-width: 90px;
+
+  margin-left: 6px;
+}
+
+
+---------  To see where this belongs   ------------
+
+
+
+.progress-bar.active {
+  border-radius: 2px;
+  background: #b6daff;
+}
+.progress-bar.complete {
+  background: linear-gradient(270deg, #9bdd5c -7.98%, #d7ffb0 105.88%);
+}
+.progress-bar.paused {
+  background: #b6c3d1;
+}
+*/
+
+/* Money to borrow */
+
+/*Pie Chart*/
+.pie-chart {
+  margin-right: 16px;
+}
+
+.component.total-borrow {
+  height: 220px;
+}
+
+.total-borrow .legend {
+  margin-top: 20px;
+}
+.total-borrow .legend .line {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 16px;
+}
+
+.total-borrow .legend .line:last-child {
+  margin-bottom: 0px;
+}
+
+.total-borrow .legend .line .color-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.total-borrow .legend .line .color-indicator.green {
+  background: linear-gradient(135.98deg, #ace30d 24.57%, #13c12f 162.66%);
+}
+.total-borrow .legend .line .color-indicator.blue {
+  background: #72b1f0;
+}
+.total-borrow .legend .line .color-indicator.grey {
+  background: #d9dfe5;
+}
+.total-borrow .legend .line p {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.total-borrow .legend .line .ammount {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Deal-completion*/
+
+/*Financial overview*/
+.financial-overview {
+  background-color: white;
+  height: max-content;
+  padding-bottom: 32px;
+}
+.financial-overview .chart {
+  height: 259px;
+}
+.financial-overview h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.financial-overview h5 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 33px auto 16px;
+}
+.financial-overview h5:first-of-type {
+  margin-top: 0px;
+}
+.financial-overview .financial-report {
+  margin-top: 30px;
+  display: block;
+}

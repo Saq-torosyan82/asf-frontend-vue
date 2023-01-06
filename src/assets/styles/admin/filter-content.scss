@@ -1,0 +1,70 @@
+.filter-content {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-x: auto;
+  margin-top: 0px;
+  padding: 10px;
+  .filter-section {
+    width: 650px;
+    // max-width: 100%;
+    margin: 0 auto;
+    margin-left: 0;
+    .filter-input-content {
+      display: inline-flex !important;
+      gap: 10px;
+      .v-autocomplete {
+        width: 100px;
+        border: 1px solid #4289da;
+        ::v-deep {
+          .v-input__control {
+            min-height: 36px;
+
+            .v-input__slot {
+              font-size: 12px;
+              padding: 0;
+              padding-left: 5px;
+              .v-select__slot {
+                input {
+                  color: #253242;
+                  text-transform: capitalize;
+                  padding: 0;
+                }
+              }
+
+              .v-label {
+                color: #707d8c;
+                font-size: 12px;
+              }
+              .v-icon {
+                font-size: 25px;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .btn-reset {
+    width: 80px;
+    min-width: 80px;
+    border-radius: 5px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 15px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  .btn-reset:hover {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,302 @@
+.modal-wrapper {
+  background-color: rgba(37, 50, 66, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 105;
+  overflow-y: auto;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 0 1rem 1rem;
+  border-bottom: 1px solid #d9dbde;
+}
+.modal-header h5 {
+  margin-bottom: 0;
+}
+.modal-header svg {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+.modal-credit-citeria {
+  width: 80%;
+  max-width: 628px;
+  min-height: 324px;
+  background: #ffffff;
+  border-radius: 6px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 48px 48px 20px;
+  position: relative;
+}
+
+.modal-base {
+  width: 80%;
+  max-width: 628px;
+  min-height: 324px;
+  background: #ffffff;
+  border-radius: 6px;
+  margin: 10vh auto auto;
+  text-align: center;
+  padding: 48px;
+  position: relative;
+}
+
+.modal-base-add-athlete {
+  text-align: inherit;
+}
+
+.modal-base.view-file {
+  width: 80%;
+  max-width: inherit;
+  min-height: 324px;
+  background: #ffffff;
+  border-radius: 6px;
+  margin: 10vh auto auto;
+  text-align: center;
+  padding: 48px;
+  position: relative;
+}
+
+.close-modal-btn {
+  top: 7px;
+  position: absolute;
+  right: 19px;
+}
+.close-modal-btn:hover {
+  cursor: pointer;
+}
+
+.modal-base h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #707d8c;
+  margin: 20px 0 16px;
+}
+.modal-base p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #253242;
+}
+svg.loader {
+  overflow: visible;
+}
+
+/** Password modal */
+.modal-password {
+  position: relative;
+  width: 80%;
+  max-width: 628px;
+  min-height: 324px;
+  background: #ffffff;
+  border-radius: 8px;
+  margin: 10vh auto auto;
+  text-align: center;
+  padding: 30px 48px 48px;
+}
+.modal-password form {
+  margin-top: 30px;
+}
+.modal-password .input-wrap {
+  margin-bottom: 24px;
+}
+.modal-password .input-wrap:last-of-type {
+  margin-bottom: 40px;
+}
+.modal-password button,
+.modal-delete-deal button {
+  padding: 17px 30px;
+  background-color: #3a9eba;
+  color: #fff;
+  font-weight: 700;
+}
+/**Delete modal */
+.modal-delete p,
+.modal-delete-deal p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #707d8c;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+.close-icon {
+  position: absolute;
+  top: 24px;
+  right: 34px;
+  cursor: pointer;
+}
+.modal-delete .input-wrap {
+  margin-top: 30px;
+}
+button.cancel {
+  margin-left: 30px;
+  background-color: #ffffff;
+  color: #3a9eba;
+  padding: 17px 30px;
+}
+
+/** Delete deal */
+.modal-delete-deal {
+  position: relative;
+  width: 80%;
+  max-width: 628px;
+  background: #ffffff;
+  border-radius: 8px;
+  margin: 10vh auto auto;
+  text-align: center;
+  padding: 35px 48px 48px;
+}
+/** Calculator documents unsuccessful */
+.documents-fail {
+  position: relative;
+}
+.documents-fail p {
+  margin: auto;
+  max-width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+}
+.documents-fail p a {
+  color: #3a9eba;
+  font-weight: 700;
+}
+.documents-fail .button {
+  border: none;
+  width: 200px;
+  height: 52px;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-top: 24px;
+  box-shadow: 2px 3px 12px rgba(112, 125, 140, 0.15);
+}
+.documents-fail .button.upload-now {
+  background-color: #3a9eba;
+  color: #ffffff;
+}
+.documents-fail .button.upload-later {
+  background-color: #ffffff;
+  color: #3a9eba;
+  margin-left: 30px;
+}
+#modal-club-snapshot {
+  transition: all 0.5s ease-out;
+  width: 91%;
+  max-width: 91%;
+  height: 87vh;
+  overflow-y: auto;
+  background: #efefef;
+  border-radius: 6px;
+  margin: 30px auto auto;
+  text-align: center;
+  padding: 50px 15px 20px;
+  position: relative;
+  .close {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  .content-section {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+/* .anonymous-click-content {
+  margin-top: 8vh;
+} */
+/* .anonymous-click-content .button {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    width: 55px;
+    height: 30px;
+    color: #fff;
+    background: #0B61C4;
+    border-radius: 4px;
+    margin-top: 30px;
+} */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 7px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #060708;
+  font-weight: 400;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #369eba;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2196f3;
+  border: none;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+}
+@media only screen and (max-width: 485px) {
+  .modal-password {
+    padding: 35px 20px;
+  }
+
+  .modal-password .modal-header h5 {
+    font-size: 16px;
+  }
+
+  button.cancel {
+    margin-left: 0px;
+  }
+}

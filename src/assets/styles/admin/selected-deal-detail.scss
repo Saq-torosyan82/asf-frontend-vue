@@ -1,0 +1,277 @@
+.deal-detail {
+  .icon-close {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  .icon-close:hover {
+    opacity: 1;
+  }
+  .icon-close:before,
+  .icon-close:after {
+    position: absolute;
+    left: 6px;
+    content: ' ';
+    height: 16px;
+    width: 3px;
+    background-color: #0d4e9a;
+    border-radius: 10px;
+  }
+  .icon-close:before {
+    transform: rotate(45deg);
+  }
+  .icon-close:after {
+    transform: rotate(-45deg);
+  }
+
+  .counterparties-section {
+    .txt-title {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 15px;
+    }
+    .div-section {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px 0;
+      .div-content {
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: center;
+        .txt-title {
+          font-size: 12px;
+          line-height: 13px;
+          font-weight: bold;
+          margin-bottom: 13px;
+        }
+        .img-avatar {
+          width: 55px;
+          height: 55px;
+          min-width: 55px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          margin-bottom: 6px;
+          border-radius: 50%;
+          border: solid 1px #c4c4c4;
+        }
+        .name {
+          font-size: 12px;
+          line-height: 13px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  .player-transfer-section {
+    border-bottom: solid 1px #d9dfe5;
+    padding-bottom: 10px;
+    .deal-progress {
+      display: flex;
+      flex-flow: column;
+      padding: 20px;
+      background: #f3f7fc;
+      border-radius: 8px;
+      font-weight: normal;
+      .txt-title {
+        font-size: 12px;
+        line-height: 13px;
+        margin-bottom: 10px;
+      }
+      .status {
+        font-size: 10px;
+        line-height: 11px;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .progress-bar-container {
+        border-radius: 10px;
+      }
+    }
+    .transfer-info {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      row-gap: 8px;
+      .div-content {
+        width: 50%;
+        margin-bottom: 0px;
+        font-size: 12px;
+        line-height: 13px;
+        .status-icon {
+          min-width: 12px;
+          height: 12px;
+          margin-right: 3px;
+        }
+        .txt-title {
+          font-weight: bold;
+          margin-right: 5px;
+        }
+        .description {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  .amount-section {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: solid 1px #d9dfe5;
+    .div-content-1 {
+      justify-content: flex-start;
+      align-items: center;
+      .deal-pieChart {
+        width: 55px;
+        height: 55px;
+      }
+    }
+    .div-content {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    .div-content,
+    .div-content-1 {
+      display: flex;
+      flex-flow: row;
+
+      .icon-total-receive {
+        height: 8px;
+        min-width: 8px;
+        background: linear-gradient(135.98deg, #ace30d 24.57%, #13c12f 162.66%);
+        border-radius: 50%;
+      }
+      .icon-to-receive {
+        height: 8px;
+        min-width: 8px;
+        background: #d9dfe5;
+        border-radius: 50%;
+      }
+      .description {
+        margin-left: 3px;
+        display: flex;
+        flex-flow: column;
+        .txt-title {
+          color: #93a0ae;
+          font-weight: normal;
+          font-size: 10px;
+          line-height: 11px;
+          padding-bottom: 8px;
+        }
+        .value {
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 19px;
+          .sub-value {
+            font-size: 12px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  .payments-schedule-section,
+  .counterparty-section {
+    padding-top: 20px;
+    .txt-title {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 15px;
+    }
+    .div-content {
+      padding: 20px 0;
+      .description {
+        margin-left: 40px;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 13px;
+      }
+      .payment-chart {
+        margin-top: 15px;
+      }
+    }
+    .div-content-info {
+      background: #f3f7fc;
+      border-radius: 8px;
+      padding: 6px 10px;
+      .section {
+        padding: 14px 0;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        .txt-title,
+        .value {
+          font-weight: normal;
+          font-size: 10px;
+          line-height: 11px;
+        }
+      }
+      .section:first-child {
+        border-bottom: solid 1px #d9dfe5;
+      }
+    }
+    .div-content-table {
+      padding: 18px 0;
+    }
+    .description {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      .txt-title,
+      .value {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 13px;
+      }
+    }
+  }
+  .txt-hide {
+    padding: 8px 0;
+    display: flex;
+    width: 100%;
+    border-bottom: solid 1px #d9dfe5;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 13px;
+    color: #3a9eba;
+    cursor: pointer;
+  }
+  .documents-section {
+    padding-top: 20px;
+    .txt-title {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 15px;
+      padding-bottom: 14px;
+    }
+  }
+  .counterparty-section {
+    .div-content-info {
+      margin-bottom: 10px;
+      .section:nth-child(2) {
+        align-items: flex-start;
+        .txt-title {
+          flex: 6;
+        }
+        .txt-title:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+}

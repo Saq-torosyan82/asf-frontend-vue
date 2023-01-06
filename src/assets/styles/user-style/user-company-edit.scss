@@ -1,0 +1,186 @@
+/* Naming components */
+
+.user-information {
+  grid-area: user-info;
+}
+.documents {
+  grid-area: documents;
+}
+.endorsment-deals {
+  grid-area: endorsment-deals;
+}
+.social-media {
+  grid-area: social-media;
+}
+.blank {
+  grid-area: blank;
+}
+.agent-phone {
+  grid-area: agent-phone;
+}
+.footer {
+  grid-area: footer;
+}
+.component.blank {
+  background-color: transparent;
+}
+
+/* GLOBAL */
+.grid {
+  display: grid;
+  gap: 15px;
+  margin-top: 16px;
+}
+.grid > * {
+  min-width: 230px;
+}
+::v-deep input,
+::v-deep select {
+  background-color: white;
+}
+.component,
+.inner-component {
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  padding: 20px;
+  /* height: max-content; */
+}
+
+::v-deep h1,
+::v-deep h2,
+::v-deep h3,
+::v-deep p {
+  color: #253242;
+}
+::v-deep h3 {
+  font-size: 14px;
+}
+::v-deep p.label {
+  color: #93a0ae;
+}
+::v-deep a {
+  text-decoration: none;
+}
+a svg {
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+
+.section-header {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+a.button {
+  display: inline-block;
+  margin: 24px 0 12px;
+  padding: 17px 40px;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: var(--primary);
+}
+/** Agent phone */
+.agent-phone {
+  height: auto;
+}
+
+.user-image {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 2px solid #dbe7f4;
+  box-sizing: content-box;
+  background-image: url('../../img/editProfile/gestifute.png');
+  background-size: cover;
+  background-position: center;
+}
+.user-info.with-image {
+  display: inline-block;
+  width: calc(100% - 90px);
+  margin-left: 16px;
+}
+
+.user-info h3,
+.user-info p {
+  margin: 0 0 4px;
+}
+.user-info h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+.user-info p {
+  font-size: 12px;
+  font-weight: 400;
+}
+.input-wrap {
+  margin-top: 10px;
+}
+
+.inner-component.link {
+  margin-top: 15px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+.inner-component.remove a {
+  color: #f61c0d;
+}
+
+//////////////////////////////////////
+///// Endorsment deals
+//////////////////////////////////////
+.component-header h3 {
+  margin: 0;
+}
+.component-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.endorsment-deals {
+  height: 100%;
+  ::v-deep {
+    .deals {
+      display: inline-flex;
+      flex-wrap: wrap;
+      row-gap: 15px;
+    }
+    .deal {
+      min-width: 100px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 60px;
+        height: 60px;
+        aspect-ratio: 1;
+        object-fit: contain;
+        margin-top: auto;
+      }
+      p {
+        color: #253242;
+        font-size: 12px;
+        line-height: 15.06px;
+        margin: 6px auto 0;
+      }
+    }
+  }
+}
+/////////////////////////
+/////////////////////////
+////////////////////////@at-root
+.lbl-add-sponsor {
+  color: var(--primary) !important;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+}

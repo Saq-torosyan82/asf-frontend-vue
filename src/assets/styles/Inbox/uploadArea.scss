@@ -1,0 +1,50 @@
+.upload-area {
+  div {
+    padding: 16px 24px;
+    border-radius: 10px;
+    border: 1px dashed #b6c3d1;
+    background-color: #ffffff;
+    box-shadow: 2px 3px 12px rgba(112, 125, 140, 0.15);
+
+    &.upload-button {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+
+      p {
+        margin-bottom: 0!important;
+        font-weight: bold;
+        font-size: 14px;
+        color: #707d8c;
+        margin-left: 12px;
+
+        span {
+          color: #3a9eba;
+        }
+      }
+
+      input {
+        opacity: 0;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+      }
+    }
+    &.upload-preview {
+      margin-top: 10px;
+      max-height: 150px;
+      overflow: auto;
+
+      .uploaded-file {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+
+        .delete-icon {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

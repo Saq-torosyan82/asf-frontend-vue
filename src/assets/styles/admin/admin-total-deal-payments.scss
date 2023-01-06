@@ -1,0 +1,121 @@
+.content {
+  padding-bottom: 20px;
+
+  .overdue-content {
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    .table-overdue-content {
+      width: 100%;
+      padding-right: 10px;
+      .card-content {
+        border-radius: 8px !important;
+        box-shadow: none !important;
+        .overdue-table-header {
+          width: 100%;
+          background: linear-gradient(90deg, #f61c0d 0%, #f86565 100%);
+          padding: 10px 0px 5px 20px;
+          line-height: 0;
+          .txt-title {
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: bold;
+            color: white;
+          }
+        }
+        .overdue-table-body {
+          width: 100%;
+          background-color: #efefef;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .chart-section {
+      width: 262px;
+      min-width: 262px;
+      height: 270px;
+    }
+  }
+  .data-filter-reset-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    // padding: 20px 0;
+    padding: 0 10px;
+    max-width: 100%;
+    button {
+      background-color: #4fc1e0;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 15px;
+      color: white;
+      text-align: center;
+      height: 36px;
+      width: 80px;
+      min-width: 80px;
+      border-radius: 5px;
+      margin-left: 20px;
+    }
+  }
+
+  .table-payment-content {
+    width: 100%;
+    margin-top: 10px;
+    .card-content {
+      width: 100%;
+      border-radius: 8px !important;
+      box-shadow: none !important;
+      .payments-table-header {
+        // background: linear-gradient(312.49deg, #246abe 10.15%, #4d8ad3 91.85%);
+        background: var(--main-gradient);
+        height: 35px;
+      }
+      .payments-table-body {
+        width: 100%;
+        .table-footer {
+          border-bottom-left-radius: 8px !important;
+          border-bottom-right-radius: 8px !important;
+          display: flex;
+          flex-flow: row;
+          padding: 7px;
+          justify-content: space-between;
+          border-top: solid 1px black;
+          font-size: 12px;
+          font-weight: bold;
+          color: black;
+          padding-right: 100px;
+        }
+      }
+    }
+    .filter-input-content {
+      padding: 10px;
+      max-width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .content {
+    .overdue-content {
+      flex-flow: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .content {
+    .data-filter-reset-section {
+      flex-flow: column-reverse;
+      align-items: flex-start;
+      .date-filter-content {
+        flex-flow: column;
+      }
+      button {
+        margin-bottom: 20px;
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,349 @@
+/* When there are 4 columns */
+@media only screen and (min-width: 1294px) {
+  .grid.grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 250px minmax(auto, 192px) 260px auto auto;
+    grid-template-areas:
+      'user-info user-info documents documents '
+      'user-info user-info news-widget-container news-widget-container '
+      'user-info user-info endorsment-deals endorsment-deals '
+      'user-info user-info social-media social-media '
+      'footer footer footer footer';
+  }
+}
+
+/* When there are 3 columns */
+@media only screen and (max-width: 1350px) {
+  .grid.grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 245px minmax(auto, 192px) 260px auto auto;
+
+    grid-template-areas:
+      'user-info documents documents'
+      'user-info news-widget-container news-widget-container'
+      'user-info endorsment-deals endorsment-deals'
+      'user-info  social-media social-media'
+      'footer  footer footer';
+  }
+  .blank.component {
+    display: none;
+  }
+}
+
+/* When there are 2 columns */
+@media only screen and (max-width: 1100px) {
+  .grid.grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 253px minmax(auto, 192px) 260px auto auto;
+    grid-template-areas:
+      'user-info documents'
+      'user-info news-widget-container'
+      'user-info endorsment-deals'
+      'user-info social-media'
+      'footer footer';
+  }
+
+  /* .content {
+    padding: 24px 15px 0;
+  } */
+  ol li p {
+    max-width: 170px;
+  }
+}
+
+/* When there is 1 column */
+@media only screen and (max-width: 900px) {
+  .grid.grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto minmax(auto, 600px) auto;
+    grid-template-areas:
+      'user-info'
+      'documents'
+      'news-widget-container'
+      'endorsment-deals'
+      'social-media'
+      'footer';
+  }
+  /* .content {
+    padding: 88px 15px 24px;
+  } */
+}
+@media only screen and (min-width: 750px) {
+  /* .content {
+    margin-left: 163px;
+    padding: 24px 40px 0;
+  } */
+}
+
+/* Naming components */
+
+.user-information {
+  grid-area: user-info;
+}
+.documents {
+  grid-area: documents;
+}
+.endorsment-deals {
+  grid-area: endorsment-deals;
+}
+.social-media {
+  grid-area: social-media;
+}
+.blank {
+  grid-area: blank;
+}
+.footer {
+  grid-area: footer;
+}
+.component.blank {
+  background-color: transparent;
+}
+
+/* GLOBAL */
+.grid {
+  display: grid;
+  gap: 15px;
+  margin-top: 16px;
+}
+.grid > * {
+  min-width: 230px;
+}
+::v-deep input,
+::v-deep select {
+  background-color: white;
+}
+.component,
+.inner-component {
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  padding: 20px;
+  /* height: max-content; */
+}
+
+::v-deep h1,
+::v-deep h2,
+::v-deep h3,
+::v-deep p {
+  color: #253242;
+}
+::v-deep h3 {
+  font-size: 14px;
+}
+::v-deep p.label {
+  color: #93a0ae;
+}
+::v-deep a {
+  text-decoration: none;
+}
+a svg {
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+/* a.link-text {
+  color: #3a9eba;
+  font-size: 14px;
+  font-weight: 700;
+}
+a.link-text-small {
+  color: #3a9eba;
+  font-size: 12px;
+  font-weight: 700;
+} */
+
+.section-header {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+a.button {
+  display: inline-block;
+  margin: 24px 0 12px;
+  padding: 17px 40px;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: var(--primary);
+}
+
+/*User information*/
+.user-image,
+.user-avatar {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 2px solid #dbe7f4;
+  box-sizing: content-box;
+  background-size: cover;
+  background-position: center;
+}
+.user-image {
+  background-image: url('../../img/editProfile/cristiano.png');
+}
+.upload {
+  display: flex;
+  align-items: center;
+}
+.user-info {
+  display: inline-block;
+  width: calc(100% - 90px);
+  margin-left: 16px;
+}
+.user-info h3,
+.user-info p {
+  margin: 0 0 4px;
+}
+.user-info h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+.user-info p {
+  font-size: 12px;
+  font-weight: 400;
+}
+.input-wrap {
+  margin-top: 10px;
+}
+
+.inner-component.link {
+  margin-top: 15px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-component.remove a.link-text {
+  color: #f61c0d !important;
+}
+
+//////////////////////////////////////
+///// Endorsment deals
+//////////////////////////////////////
+.component-header h3 {
+  margin: 0;
+}
+.component-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.endorsment-deals {
+  // height: 100%;
+  ::v-deep {
+    .deals {
+      display: inline-flex;
+      flex-wrap: wrap;
+      row-gap: 15px;
+    }
+    .deal {
+      min-width: 100px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 60px;
+        height: 60px;
+        aspect-ratio: 1;
+        object-fit: contain;
+        margin-top: auto;
+      }
+      p {
+        color: #253242;
+        font-size: 12px;
+        line-height: 15.06px;
+        margin: 6px auto 0;
+      }
+    }
+  }
+}
+
+/** Documents */
+/* .documents-header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 39px;
+  padding-left: 20px;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(312.49deg, #246abe 10.15%, #4d8ad3 91.85%);
+} */
+/* .documents-header h3 {
+  color: white;
+  font-weight: 700;
+  margin: 0 0 0 12px;
+}
+.document-list {
+  margin-top: 35px;
+}
+.document-list ol {
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.document-list li {
+  padding-left: 8px;
+  margin-bottom: 12px;
+}
+.document-list li:last-child {
+  margin-bottom: 4px;
+}
+.document-list p {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.document-list span {
+  float: right;
+}
+.document-list svg {
+  height: 16px;
+  width: 16px;
+  margin: 0 0 3px 8px;
+} */
+
+/** Endorsment deals */
+/*
+.component-header h3 {
+  margin: 0;
+}
+.component-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.endorsment-deals {
+  height: auto;
+}
+.endorsment-deals .deal:nth-child(-n + 5) {
+  margin-top: 0px;
+}
+.endorsment-deals .deal {
+  width: 20%;
+  float: left;
+  margin-top: 32px;
+}
+.endorsment-deals .deal img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid #e9e9e9;
+}
+.endorsment-deals .deal p {
+  margin: 8px 0 0;
+  font-size: 13px;
+} */
+
+/** Social media
+.component.social-media {
+  height: auto;
+}
+.component.social-media a.button {
+  position: absolute;
+  bottom: 20px;
+}*/

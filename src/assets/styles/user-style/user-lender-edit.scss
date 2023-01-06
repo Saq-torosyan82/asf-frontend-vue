@@ -1,0 +1,28 @@
+.deal-criteria {
+  grid-area: deal-criteria;
+}
+
+/* When there are 2 column */
+.grid.grid {
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'agent-phone documents'
+    'user-info news-widget-container'
+    'user-info deal-criteria'
+    'footer footer';
+}
+
+/* When there is 1 column */
+@media only screen and (max-width: 1050px) {
+  .grid.grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 260px auto auto;
+    grid-template-areas:
+      'agent-phone '
+      'documents'
+      'news-widget-container'
+      'user-info '
+      'deal-criteria'
+      ' footer';
+  }
+}

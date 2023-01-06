@@ -1,0 +1,412 @@
+/* When there are 4 columns */
+@media only screen and (min-width: 1351px) {
+  .grid.grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 340px 260px 280px 260px 160px 550px;
+
+    grid-template-areas:
+      'agent-phone agent-phone documents documents'
+      'user-info user-info news-widget-container news-widget-container'
+      'user-info user-info user-widget-container user-widget-container'
+      'user-info user-info athletes-component athletes-component'
+      'user-info user-info social-media social-media'
+      'footer footer footer footer';
+  }
+}
+
+/* When there are 3 columns */
+@media only screen and (max-width: 1350px) {
+  .grid.grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 340px 260px 260px 160px 550px;
+
+    grid-template-areas:
+      'agent-phone documents documents'
+      'user-info news-widget-container news-widget-container'
+      'user-info user-widget-container user-widget-container'
+      'user-info athletes-component athletes-component'
+      'user-info  social-media social-media'
+      'footer  footer footer';
+  }
+  .blank.component {
+    display: none;
+  }
+}
+
+/* When there are 2 columns */
+@media only screen and (max-width: 1100px) {
+  .grid.grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 340px 260px 260px 160px 550px;
+    grid-template-areas:
+      'agent-phone documents'
+      'user-info news-widget-container'
+      'user-info user-widget-container'
+      'user-info athletes-component'
+      'user-info social-media'
+      'footer footer';
+  }
+  /* .content {
+    padding: 24px 15px 0;
+  } */
+  ul li p {
+    max-width: 170px;
+  }
+}
+
+/* When there is 1 column */
+@media only screen and (max-width: 900px) {
+  .grid.grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto minmax(auto, 600px) auto;
+    grid-template-areas:
+      'agent-phone'
+      'user-info'
+      'documents'
+      'news-widget-container'
+      'user-widget-container'
+      'athletes-component'
+      'social-media'
+      'footer';
+  }
+  /* .content {
+    padding: 88px 15px 24px;
+  } */
+}
+@media only screen and (min-width: 750px) {
+  /* .content {
+    margin-left: 163px;
+    padding: 24px 40px 0;
+  } */
+}
+
+/* Naming components */
+
+.user-information {
+  grid-area: user-info;
+}
+.documents {
+  grid-area: documents;
+}
+::v-deep .athletes-component {
+  grid-area: athletes-component;
+}
+.social-media {
+  grid-area: social-media;
+}
+.agent-phone {
+  grid-area: agent-phone;
+}
+.footer {
+  grid-area: footer;
+}
+.component.blank {
+  background-color: transparent;
+}
+
+/* GLOBAL */
+.grid {
+  display: grid;
+  gap: 15px;
+  margin-top: 16px;
+}
+.grid > * {
+  min-width: 230px;
+}
+::v-deep input,
+::v-deep select {
+  background-color: white;
+}
+.component,
+.inner-component {
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  padding: 20px;
+  /* height: max-content; */
+}
+
+::v-deep h1,
+::v-deep h2,
+::v-deep h3,
+::v-deep p {
+  color: #253242;
+}
+::v-deep h3 {
+  font-size: 14px;
+}
+::v-deep p.label {
+  color: #93a0ae;
+}
+::v-deep a {
+  text-decoration: none;
+}
+a svg {
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+/* a.link-text {
+  color: #3a9eba;
+  font-size: 14px;
+  font-weight: 700;
+}
+a.link-text-small {
+  color: #3a9eba;
+  font-size: 12px;
+  font-weight: 700;
+} */
+
+.section-header {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+a.button {
+  display: inline-block;
+  margin: 24px 0 12px;
+  padding: 14px 40px;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: var(--primary);
+}
+/** Agent phone */
+// .agent-phone .input-wrap {
+//   margin-top: 10px;
+// }
+/*User information*/
+.user-image {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 2px solid #dbe7f4;
+  box-sizing: content-box;
+  background-image: url('../../img/editProfile/gestifute.png');
+  background-size: cover;
+  background-position: center;
+}
+.user-info.with-image {
+  display: inline-block;
+  width: calc(100% - 90px);
+  margin-left: 16px;
+}
+
+.user-info h3,
+.user-info p {
+  margin: 0 0 4px;
+}
+.user-info h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+.user-info p {
+  font-size: 12px;
+  font-weight: 400;
+}
+.input-wrap {
+  margin-top: 10px;
+}
+
+.inner-component.link {
+  margin-top: 15px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+.inner-component.remove a {
+  color: #f61c0d;
+}
+
+//////////////////////////////////////
+///// Endorsment deals
+//////////////////////////////////////
+.component-header h3 {
+  margin: 0;
+}
+.component-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.endorsment-deals {
+  height: 100%;
+  ::v-deep {
+    .deals {
+      display: inline-flex;
+      flex-wrap: wrap;
+      row-gap: 15px;
+    }
+    .deal {
+      min-width: 100px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 60px;
+        height: 60px;
+        aspect-ratio: 1;
+        object-fit: contain;
+        margin-top: auto;
+      }
+      p {
+        color: #253242;
+        font-size: 12px;
+        line-height: 15.06px;
+        margin: 6px auto 0;
+      }
+    }
+  }
+}
+
+/** Documents */
+/** Tabs */
+/* .component.documents {
+  padding-right: 0;
+  padding-bottom: 0;
+}
+.documents-header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 39px;
+  padding-left: 20px;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(312.49deg, #246abe 10.15%, #4d8ad3 91.85%);
+}
+.documents-header h3 {
+  color: white;
+  font-weight: 700;
+  margin: 0 0 0 12px;
+}
+.documents ::v-deep.tabs {
+  margin-top: 19px;
+}
+
+.documents::v-deep .nav-tabs,
+.documents::v-deep .nav-tabs .nav-link.active,
+.documents::v-deep .nav-tabs .nav-item.show .nav-link {
+  border-color: white;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+/* .documents::v-deep .nav-tabs a.nav-link.active {
+  font-weight: 700;
+  color: #4289da;
+  border-bottom: 2px solid #4289da;
+} */
+/* .documents::v-deep .nav-tabs a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #707d8c;
+  margin-right: 8px;
+  padding: 10px 10px 3px 5px;
+  border: none;
+}
+.documents::v-deep .nav-tabs .nav-item {
+  border-bottom: 1px solid #d9dfe5;
+}
+.documents::v-deep .nav-tabs a:hover {
+  color: #586574;
+}  */
+
+/**Ocistiti kako je kopirano */
+/* .document-list ul {
+  padding: 0px 10px 0px 0px;
+  margin-bottom: 0;
+  font-size: 14px;
+  overflow-y: auto;;
+  max-height: 193px;
+}
+.document-list li {
+  padding-left: 8px;
+  margin-top: 12px;
+}
+.document-list li:last-child {
+  margin-bottom: 20px;
+}
+.document-list p {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.document-list span {
+  float: right;
+}
+.document-list svg {
+  height: 16px;
+  width: 16px;
+  margin: 0 0 3px 8px;
+} */
+
+/* .athletes {
+  height: 400px;
+  overflow-y: auto;;
+  padding-right: 20px;
+}
+.component-header h3 {
+  margin: 0;
+}
+.component-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-right: 20px;
+}
+.athlete {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.athlete img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #dbe7f4;
+}
+.athlete p {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 0 18px;
+}
+.athlete .actions {
+  margin-left: auto;
+}
+.athlete a {
+  margin-left: 24px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.athlete a svg {
+  margin-right: 6px;
+  margin-bottom: 2.5px;
+  height: 10px;
+  width: 10px;
+}
+.athlete a.edit,
+a.edit ::v-deep svg path {
+  color: #3a9eba;
+  fill: #3a9eba;
+}
+.athlete a.delete,
+a.delete ::v-deep svg path {
+  color: #f61c0d;
+  fill: #f61c0d;
+} */
+
+/** Social media
+.component.social-media {
+  height: auto;
+}
+.component.social-media a.button {
+  position: absolute;
+  bottom: 20px;
+}*/

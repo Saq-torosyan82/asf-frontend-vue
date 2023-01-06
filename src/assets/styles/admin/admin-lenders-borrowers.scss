@@ -1,0 +1,213 @@
+.content {
+  padding-bottom: 20px;
+  .table-content {
+    // margin-top: 20px;
+    .filter-wrapper {
+      padding: 10px;
+    }
+    .card-content {
+      border-radius: 8px !important;
+      box-shadow: none !important;
+      .table-header {
+        padding: 5px 20px;
+        // background: linear-gradient(312.49deg, #246abe 10.15%, #4d8ad3 91.85%);
+        background: var(--main-gradient);
+        .table-filter {
+          cursor: pointer;
+          position: relative;
+          .sort-container {
+            position: absolute;
+            box-shadow: 0px 6px 10px rgb(195 196 198 / 60%);
+            width: 250px;
+            right: 10px;
+            top: 35px;
+            border-radius: 10px;
+            display: flex;
+            flex-flow: column;
+            background: var(--main-gradient);
+            z-index: 1000;
+
+            .sort-title {
+              height: 40px;
+              border-top-right-radius: 10px;
+              border-top-left-radius: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              padding-left: 20px;
+              width: 100%;
+              color: white;
+              font-size: 14px;
+            }
+            .sort-content {
+              border-bottom-right-radius: 8px;
+              border-bottom-left-radius: 8px;
+
+              padding: 10px 20px;
+              background: white;
+              .sort-name {
+                color: #253242;
+                font-size: 12px;
+                font-weight: 600;
+              }
+              .v-input--selection-controls {
+                margin-top: 0px;
+                padding-top: 0;
+                ::v-deep {
+                  .v-input__slot {
+                    margin-bottom: 0;
+                    margin: 0;
+                    .v-label {
+                      color: #253242;
+                      font-size: 12px;
+                    }
+                    .v-icon {
+                      font-size: 20px;
+                    }
+                    .v-input--radio-group__input {
+                      .v-radio {
+                        margin: 4px 0;
+                      }
+                    }
+                  }
+                  .v-messages.theme--light {
+                    min-height: 8px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .table-body {
+        .selectedRow {
+          background: #d9dfe5 !important;
+        }
+        table {
+          thead {
+            min-width: 750px;
+          }
+          tbody {
+            min-width: 750px;
+            max-height: 350px;
+            tr {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  .dp-deal-detail {
+    display: block;
+  }
+  .md-deal-detail {
+    display: none;
+    margin-top: 30px;
+  }
+  .table-top-content {
+    position: relative;
+    padding-left: 41px;
+    margin-top: 50px;
+    // display: flex;
+    // flex-flow: row;
+    // align-items: center;
+    // justify-content: center;
+
+    // .table-header {
+    //   display: inline-block;
+    //   text-align: right;
+    //   transform: rotate(-90deg);
+    //   transform-origin: center;
+    //   white-space: nowrap;
+    //   font-size: 14px;
+    //   color: #253242;
+    //   font-weight: bold;
+    //   width: 20px;
+    //   height: 15px;
+    //   margin-top: 65px;
+    //   .txt-num {
+    //     font-weight: normal;
+    //     font-size: 12px;
+    //   }
+    // }
+    table {
+      background-color: white;
+      border-radius: 0 8px 8px 0;
+      overflow: hidden;
+      color: #253242;
+      min-height: 150px;
+      .selectedRow {
+        background: #d9dfe5 !important;
+      }
+      tr {
+        font-size: 11px;
+        cursor: pointer;
+        height: 40px;
+        td {
+          &:first-child {
+            width: 50px;
+            text-align: center;
+          }
+          padding: 8px;
+        }
+      }
+      thead {
+        min-width: 900px;
+        tr {
+          cursor: default;
+          font-weight: bold;
+          background-color: #f3f7fc;
+          height: 50px;
+          max-height: 50px;
+        }
+      }
+      tbody {
+        min-width: 900px;
+      }
+      .no-data {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 14px;
+        color: #93a0ae;
+      }
+      // td:first-child {
+      //   background-color: #b6daff;
+      //   border-bottom-left-radius: 8px;
+      //   border-top-left-radius: 8px;
+      //   padding: 50px 8px 14px;
+      // }
+    }
+    .table-ribbon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      max-width: 41px;
+      height: 100%;
+      background-color: #b6daff;
+      border-radius: 8px 0 0 8px;
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        transform: rotate(-90deg);
+        transform-origin: center;
+        white-space: nowrap;
+        font-weight: bold;
+        font-size: 14px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1263px) {
+  .md-deal-detail {
+    display: block !important;
+  }
+  .dp-deal-detail {
+    display: none !important;
+  }
+}

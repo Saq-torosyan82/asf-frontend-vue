@@ -1,0 +1,310 @@
+.divider {
+  width: 100%;
+  border-top: 1px solid #d9dfe5;
+  margin: 25px 0 15px;
+  padding: 25px 0 0;
+}
+
+//////////////////////////////////////
+///// Layout
+//////////////////////////////////////
+
+@media screen and (max-width: 960px) {
+  .content {
+    .inbox-content {
+      grid-template-columns: 1fr;
+      .messages-list {
+        .deals-inbox.scroll {
+          height: 400px;
+        }
+      }
+      .messages {
+        .messages-container {
+          padding: 20px 5px;
+          ::v-deep {
+            .head_container {
+              padding: 10px 5px;
+              .right-side {
+                .status {
+                  p {
+                    line-height: 1;
+                    align-items: flex-start;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .new-conversation {
+          padding: 30px 8px;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  padding-bottom: 15px;
+}
+.inbox-content {
+  margin-top: 10px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 0.4fr 0.6fr;
+  gap: 20px;
+  .messages-list {
+    width: 100%;
+    .deals-inbox.scroll {
+      height: 750px;
+      .deal-inbox-card-list {
+        height: 100%;
+        overflow-y: auto;
+        padding: 0 10px 15px 15px;
+      }
+    }
+  }
+}
+.deals-inbox {
+  position: relative;
+  padding-top: 64px;
+  border-radius: 0 10px 10px 10px;
+  .deals-inbox-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-between;
+    svg.deals-inbox-header-filter {
+      fill: var(--primary);
+    }
+  }
+}
+
+//////////////////////////////////////
+///// Card Styling
+//////////////////////////////////////
+.deal-inbox-card {
+  // min-width: 270px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid #e7f1f3;
+  box-shadow: 2px 3px 12px rgba(112, 125, 140, 0.05);
+  gap: 7px;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+  &.selected {
+    border: 1.5px solid #6eacbd;
+  }
+  &:hover:not(.selected) {
+    border: 1px solid #bcdfe7;
+  }
+  .image {
+    width: 40px;
+    height: 40px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 1;
+    }
+  }
+  h5 {
+    font-size: 12px;
+    color: #060708;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    font-size: 10px;
+    color: #a3abad;
+  }
+  .status-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+.deal-inbox-card.service-center-card {
+  p:not(.service-message-title) {
+    color: #060708;
+    margin-top: 5px;
+  }
+  p.service-message-title {
+    margin: 15px 0;
+  }
+}
+
+//////////////////////////////////////
+/////
+/////  TODO:
+/////   1. DRY Card stlyes
+/////
+/////
+//////////////////////////////////////
+
+.deal-inbox-card.paused {
+  background: linear-gradient(180deg, #f7f1e8 20%, #ffffff 100%);
+}
+.deal-inbox-card.in_progress {
+  background: linear-gradient(180deg, #f4f4f4 0%, #ffffff 100%);
+}
+.deal-inbox-card.live {
+  background: linear-gradient(180deg, #a0daea 0%, #ffffff 100%);
+}
+.deal-inbox-card.accepted {
+  background: linear-gradient(180deg, #eff6fc 0%, #ffffff 100%);
+}
+
+.deal-inbox-card.started {
+  background: linear-gradient(180deg, #f9fff8 0%, #ffffff 100%);
+}
+.deal-inbox-card.complete {
+  background: linear-gradient(180deg, #eefff0 0%, #ffffff 100%);
+}
+
+//////////////////////////////////////
+///// Message Content
+//////////////////////////////////////
+.messages {
+  flex-grow: 1;
+  .component {
+    padding: 0;
+    position: relative;
+    min-height: 760px;
+  }
+  .messages-header {
+    width: 100%;
+    gap: 40px;
+    justify-content: flex-start;
+    padding: 0 30px;
+    h5 {
+      font-size: 16px;
+      color: #253242;
+      margin: 0;
+    }
+    p {
+      font-size: 12px;
+      margin: 0;
+      color: #9ba1a8;
+    }
+    .messages-title {
+      h5 {
+        font-weight: bold;
+      }
+      p {
+        margin-top: 5px;
+      }
+    }
+    .deal-attributes {
+      label {
+        line-height: 1rem;
+      }
+      p {
+        line-height: 27px;
+        margin: 0 0 7px;
+        color: #253242;
+        svg {
+          margin-right: 7px;
+        }
+      }
+    }
+    .assigned-to {
+      margin-left: auto;
+      img {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+.no-messages {
+  p {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #93a0ae;
+  }
+}
+hr {
+  color: #d9dfe5;
+  opacity: 1;
+  margin: 0 25px;
+}
+.message-wrap {
+  width: 100%;
+  gap: 10px;
+  margin-top: 20px;
+  align-items: flex-start;
+
+  .sender-logo {
+    margin-top: 20px;
+    height: 45px;
+    width: 45px;
+    aspect-ratio: 1;
+    border: 1.3px solid #d9dfe5;
+    border-radius: 50%;
+    img {
+      width: 85%;
+      height: 85%;
+      margin: 7.5% 7.5%;
+    }
+  }
+  .message {
+    flex-grow: 1;
+    padding: 20px 25px;
+    border: 1px solid #d9dfe5;
+    border-radius: 4px;
+  }
+  .messages-header {
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0;
+    h5 {
+      font-weight: 600;
+    }
+  }
+  .message-text {
+    font-size: 14px;
+    color: #707d8c;
+    line-height: 1.45em;
+    margin: 20px 0;
+  }
+}
+//////////////////////////////////////
+///// New message
+//////////////////////////////////////
+.new-conversation {
+  padding: 30px 30px 20px;
+  height: 100%;
+  .new-message-deals {
+    gap: 10px;
+    max-width: 100%;
+    overflow-x: auto;
+    .deal-inbox-card {
+      margin-bottom: 0;
+      min-width: 270px;
+    }
+  }
+  .new-message-header {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 25px 0 15px;
+  }
+}
+
+//////////////////////////////////////
+///// Scroll bar
+//////////////////////////////////////
+::-webkit-scrollbar-track {
+  background: white;
+  margin: 10px;
+}

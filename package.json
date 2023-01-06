@@ -1,0 +1,97 @@
+{
+  "name": "asf",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --dest build;rm -rf dist;mv build dist",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@coders-tm/vue-number-format": "^2.0.7",
+    "@formulajs/formulajs": "^3.0.0",
+    "@mdi/font": "^6.5.95",
+    "@progress/kendo-vue-excel-export": "^3.3.4",
+    "axios": "^0.21.4",
+    "bootstrap": "^5.1.1",
+    "bootstrap-vue": "^2.21.2",
+    "chart.js": "^2.9.4",
+    "chartjs-plugin-datalabels": "^0.6.0",
+    "core-js": "^3.17.3",
+    "highcharts": "^9.3.2",
+    "highcharts-vue": "^1.4.0",
+    "lodash": "^4.17.21",
+    "material-design-icons-iconfont": "^6.1.1",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
+    "numeral": "^2.0.6",
+    "simple-modal-vue": "^1.0.12",
+    "v-money": "^0.8.1",
+    "v-money-no-negative": "^0.8.3",
+    "vue": "^2.6.14",
+    "vue-async-computed": "^3.9.0",
+    "vue-auth-href": "^1.4.1",
+    "vue-auth-image": "^0.0.3",
+    "vue-chartjs": "^3.5.1",
+    "vue-click-outside": "^1.1.0",
+    "vue-clickaway": "^2.2.2",
+    "vue-country-flag": "^2.3.2",
+    "vue-doc-preview": "^0.3.2",
+    "vue-filter-number-format": "^3.0.1",
+    "vue-html2pdf": "^1.8.0",
+    "vue-json-excel": "^0.3.0",
+    "vue-moment": "^4.1.0",
+    "vue-multiselect": "^2.1.6",
+    "vue-number-format": "^1.2.1",
+    "vue-numerals": "^4.0.6",
+    "vue-picture-input": "^2.1.6",
+    "vue-route-middleware": "^1.0.7",
+    "vue-router": "^3.5.2",
+    "vue-signature": "^2.5.4",
+    "vue-tel-input": "^5.6.2",
+    "vue-tiny-lazyload-img": "^0.1.0",
+    "vuejs-datepicker": "^1.6.2",
+    "vuejs-loading-plugin": "^1.0.51",
+    "vuelidate": "^0.7.6",
+    "vuetify": "^2.4.0",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "^4.5.13",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^6.0.0",
+    "prettier": "^2.5.1",
+    "sass": "^1.32.0",
+    "sass-loader": "^8.0.0",
+    "vue-cli-plugin-vuetify": "~2.4.0",
+    "vue-svg-loader": "^0.16.0",
+    "vue-template-compiler": "^2.6.14",
+    "vuetify-loader": "^1.7.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {
+      "no-unused-vars": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

@@ -1,0 +1,50 @@
+.new-conversation {
+  padding: 30px;
+  .message {
+    input {
+      padding: 15px;
+      border: 1px solid #d9dfe5;
+      border-radius: 8px;
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    textarea {
+      border: 1px solid #d9dfe5;
+      border-radius: 8px;
+      resize: none;
+      width: 100%;
+      padding: 15px;
+      font-size: 14px;
+      min-height: 200px;
+    }
+  }
+  .new-message-header {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 25px 0 15px;
+  }
+}
+
+.new-message-block {
+  // padding: 30px;
+  border-top: 1px solid #d9dfe5;
+  padding-top: 10px;
+  input {
+    padding: 15px;
+    border: 1px solid #d9dfe5;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  textarea {
+    border: 1px solid #d9dfe5;
+    border-radius: 8px;
+    resize: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    min-height: 50px;
+  }
+}

@@ -1,0 +1,87 @@
+.offer-main {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  .offer-header {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .offer-note {
+    font-size: 12px;
+  }
+  .submit-message {
+    margin-bottom: 40px;
+  }
+  div.all-offers {
+    div.offer {
+      display: grid;
+      justify-content: center;
+      text-align: center;
+      padding-bottom: 15px;
+      user-select: none;
+      p {
+        opacity: 0.6;
+        font-size: 12px;
+      }
+      img {
+        margin: auto;
+      }
+      input {
+        margin: 8px auto;
+        border: 1px solid #d9dfe5;
+        padding: 8px;
+      }
+      a {
+        color: #0b61c4;
+        opacity: 0.5;
+        pointer-events: none;
+        font-size: 12px;
+        img {
+          margin: 0 5px 2px 0;
+        }
+      }
+    }
+  }
+}
+.buttons-part {
+  a {
+    color: #fff;
+    font-size: 14px;
+    line-height: 17.57px;
+    font-weight: bold;
+    background-color: #b6daff;
+    height: 41px;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .buttons-part {
+    display: flex;
+  }
+  div.all-offers {
+    display: flex;
+    overflow-x: auto;
+    div.offer {
+      min-width: 25%;
+    }
+  }
+}
+@media only screen and (max-width: 1199px) {
+  div.all-offers {
+    height: 218px;
+    overflow-y: auto;
+  }
+  .buttons-part {
+    a {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
